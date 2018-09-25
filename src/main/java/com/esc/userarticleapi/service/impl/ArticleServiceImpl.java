@@ -41,4 +41,9 @@ public class ArticleServiceImpl implements ArticleService {
     public List<Integer> getUserIdByArticleNumberGreaterThan(Integer number) {
         return articleRepository.getUserIdByArticleNumberGreaterThan(number);
     }
+
+    @Override
+    public Article saveArticle(Article article) {
+        return articleRepository.save(article);
+    }
 }
