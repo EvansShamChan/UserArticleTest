@@ -1,12 +1,14 @@
 package com.esc.userarticleapi.entity;
 
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Data
+@NoArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
@@ -22,7 +24,7 @@ public class User {
     @Column(name = "age")
     private Integer age;
 
-
+    @JsonIgnore
     @OneToMany(mappedBy = "userId")
     private List<Article> articleList;
 

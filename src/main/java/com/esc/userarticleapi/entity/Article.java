@@ -1,11 +1,12 @@
 package com.esc.userarticleapi.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
+@NoArgsConstructor
 @Entity
 @Table(name = "articles")
 public class Article {
@@ -22,7 +23,7 @@ public class Article {
     @Column(name = "color")
     private SelectedColor color;
 
-    enum SelectedColor {
+    public enum SelectedColor {
         BLACK,
         WHITE,
         GREEN,
