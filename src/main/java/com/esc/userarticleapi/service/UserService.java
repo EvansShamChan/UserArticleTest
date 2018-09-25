@@ -11,4 +11,6 @@ public interface UserService {
     List<User> getUsersByArticleColor(String color);
 
     List<String> getUserIdByArticleNumberGreaterThan(Integer number);
+
+    User saveUser(User user);
 }

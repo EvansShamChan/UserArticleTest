@@ -48,4 +48,9 @@ public class UserServiceImpl implements UserService {
         List<Integer> userIdByArticleNumberGreaterThan = articleService.getUserIdByArticleNumberGreaterThan(number);
         return userRepository.getDistinctNamesByIdIn(userIdByArticleNumberGreaterThan);
     }
+
+    @Override
+    public User saveUser(User user) {
+        return userRepository.save(user);
+    }
 }
